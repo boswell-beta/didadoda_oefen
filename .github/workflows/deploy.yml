@@ -3,7 +3,12 @@ name: Deploy
 on:
   push:
     branches: [main]
-
+    
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  
 jobs:
   deploy:
     uses: FreekPols/JB-workflows/.github/workflows/minimal_workflow.yml@main
